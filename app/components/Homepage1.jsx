@@ -51,6 +51,21 @@ export default function Homepage1() {
         <p className="subtitle">An immersive musical journey</p>
       </div>
       <div className="scroll-prompt">Scroll to begin</div>
+      <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] left-[0px] flex items-end z-10">
+        <img src="/Images/8918181.png" alt="" className="w-full" />
+      </div>
+      <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] left-[20px] flex items-end z-10">
+        <img src="/Images/8918181.png" alt="" className="w-full" />
+      </div>
+      <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] left-[-100px] flex items-end z-10">
+        <img src="/Images/8918181.png" alt="" className="w-full" />
+      </div>
+      <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] right-[-220px] flex items-end z-10">
+        <img src="/Images/8918181.png" alt="" className="w-full" />
+      </div>
+      <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] right-[-180px] flex items-end z-10">
+        <img src="/Images/8918181.png" alt="" className="w-full" />
+      </div>
     </section>
   );
 }
