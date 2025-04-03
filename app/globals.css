@@ -1,0 +1,649 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --dark-color: #1a1a1a;
+  --light-color: #f8f8f8;
+  --accent-color: #e75480;
+  --accent-light: #ffb7c5;
+  --gold-color: #d4af37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  transition: all 0.5s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/* Landing Page Styles */
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url("/Images/pngtree-cherry-blossom-tree-spring-plant-flower-petals-png-image_6748513.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 30vh;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.5s ease;
+}
+
+.main-title {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  color: var(--dark-color);
+  transition: all 0.3s ease;
+}
+
+.main-title:hover {
+  transform: translateY(-5px);
+  color: var(--accent-color);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.piano {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to right, #111 0%, #111 50%, #eee 50%, #eee 100%);
+  display: flex;
+  z-index: 5;
+}
+
+.key {
+  height: 100%;
+  flex: 1;
+  position: relative;
+  border-right: 1px solid #444;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.key.white {
+  background-color: #fff;
+}
+
+.key.black {
+  background-color: #111;
+  height: 60%;
+  width: 60%;
+  margin-left: -30%;
+  margin-right: -30%;
+  z-index: 2;
+}
+
+.key:active {
+  transform: translateY(2px);
+}
+
+.key.active {
+  background-color: var(--accent-light);
+}
+
+.key.black.active {
+  background-color: var(--accent-color);
+}
+
+.petal {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent-light);
+  border-radius: 50% 0 50% 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(140vh) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.color-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 228, 225, 0) 0%,
+    rgba(255, 228, 225, 0.8) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+.scroll-prompt {
+  position: absolute;
+  bottom: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  opacity: 0.7;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Story Section Styles */
+.story-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background-color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+}
+
+.timeline {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  height: 70vh;
+  align-items: center;
+  scrollbar-width: none; /* Firefox */
+}
+
+.timeline::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.chapter {
+  min-width: 80vw;
+  height: 60vh;
+  margin: 0 2rem;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: all 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.chapter-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.chapter-content {
+  max-width: 600px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.chapter.active .chapter-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sheet-music {
+  width: 200px;
+  height: 80px;
+  background-color: white;
+  margin: 1rem auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.music-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+}
+
+.music-note {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+}
+
+.violin {
+  width: 80px;
+  height: 150px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200"><path d="M50,10 L60,50 L70,100 L60,150 L50,190 L40,150 L30,100 L40,50 Z" fill="none" stroke="black" stroke-width="2"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.violin:hover {
+  filter: drop-shadow(0 0 10px var(--gold-color));
+}
+
+/* Music Section Styles */
+.music-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.concert-hall {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.music-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-10px);
+}
+
+.music-cover {
+  height: 200px;
+  background-color: var(--accent-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-title {
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  background-color: var(--dark-color);
+}
+
+.music-info {
+  padding: 1.5rem;
+}
+
+.sound-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--dark-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background-color: var(--accent-color);
+}
+
+/* Symbolism Section Styles */
+.symbolism-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background-color: var(--light-color);
+}
+
+.symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.symbol-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.symbol-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.symbol-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.symbol-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+/* Letter Section Styles */
+.letter-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.letter-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.letter-paper {
+  position: relative;
+  min-height: 500px;
+  padding: 2rem;
+  background-color: #fffaf0;
+  border: 1px solid #e0d0b0;
+}
+
+.letter-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.tear {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(200, 230, 255, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wipe-instruction {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Memorial Section Styles */
+.memorial-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #0a0e2a, #1a1a3a);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.note {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-light);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+.memorial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.message-form {
+  margin-top: 3rem;
+}
+
+.message-input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  padding: 0.8rem 2rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--gold-color);
+  transform: translateY(-3px);
+}
+
+.simple-piano {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.simple-key {
+  width: 40px;
+  height: 120px;
+  background-color: white;
+  margin: 0 2px;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.simple-key:active {
+  background-color: var(--accent-light);
+  transform: translateY(2px);
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  margin: 10px 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .chapter {
+    min-width: 90vw;
+    height: 50vh;
+  }
+
+  .concert-hall {
+    grid-template-columns: 1fr;
+  }
+}
