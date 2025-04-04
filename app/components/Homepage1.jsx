@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Homepage1() {
   const petalIntervalRef = useRef(null);
@@ -41,8 +42,14 @@ export default function Homepage1() {
 
   return (
     <section className="landing" id="landing">
-      <div className="absolute w-[500px] max-w-[90%] h-[300px] bottom-0 left-[0px] flex items-end z-10">
-        <img src="/Images/pngegg (2).png" alt="" className="w-full" />
+      <div className="absolute w-[500px] max-w-[80%] h-[300px] bottom-0 left-[0px] flex items-end z-10">
+        <Image
+          src="/Images/pngegg (2).png"
+          alt=""
+          width={500}
+          height={300}
+          className="w-full"
+        />
       </div>
       <div className="title-container">
         <h1 className="main-title" id="main-title">
@@ -52,19 +59,49 @@ export default function Homepage1() {
       </div>
       <div className="scroll-prompt">Scroll to begin</div>
       <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] left-[0px] flex items-end z-10">
-        <img src="/Images/8918181.png" alt="" className="w-full" />
+        <Image
+          src="/Images/8918181.png"
+          alt=""
+          width={500}
+          height={100}
+          className="w-full"
+        />
       </div>
       <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] left-[20px] flex items-end z-10">
-        <img src="/Images/8918181.png" alt="" className="w-full" />
+        <Image
+          src="/Images/8918181.png"
+          alt=""
+          width={500}
+          height={100}
+          className="w-full"
+        />
       </div>
       <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] left-[-100px] flex items-end z-10">
-        <img src="/Images/8918181.png" alt="" className="w-full" />
+        <Image
+          src="/Images/8918181.png"
+          alt=""
+          width={500}
+          height={100}
+          className="w-full"
+        />
       </div>
       <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] right-[-220px] flex items-end z-10">
-        <img src="/Images/8918181.png" alt="" className="w-full" />
+        <Image
+          src="/Images/8918181.png"
+          alt=""
+          width={500}
+          height={100}
+          className="w-full"
+        />
       </div>
       <div className="absolute w-[500px] max-w-[90%] bottom-[-130px] h-[100px] right-[-180px] flex items-end z-10">
-        <img src="/Images/8918181.png" alt="" className="w-full" />
+        <Image
+          src="/Images/8918181.png"
+          alt=""
+          width={500}
+          height={100}
+          className="w-full"
+        />
       </div>
     </section>
   );

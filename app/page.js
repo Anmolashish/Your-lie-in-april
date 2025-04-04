@@ -12,8 +12,9 @@ export default function Home() {
     <>
       <Navbar />
       <Homepage1 />
+      <HomePage3 />
       <HomePage2 />
-      {/* <HomePage3 /> */}
+
       {/* <HomePage4 /> */}
       {/* <HomePage5 /> */}
       <HomePage6 />
