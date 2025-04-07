@@ -7,7 +7,7 @@ export default function Navbar() {
     "landing",
     "story",
     "music",
-    "symbolism",
+    "polaroid",
     "letter",
     "memorial",
   ];
@@ -71,7 +71,7 @@ export default function Navbar() {
       {sections.map((section, index) => (
         <div
           key={section}
-          className={`nav-dot ${index === 0 ? "active" : ""}`}
+          className={`nav-dot max-sm:hidden ${index === 0 ? "active" : ""}`}
           data-section={section}
         />
       ))}

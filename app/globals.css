@@ -17,7 +17,7 @@
   --light-color: #ffffff;
   --accent-color: #e75480;
   --accent-light: #ffb7c5;
-  --gold-color: #d4af37;
+  --gold-color: #ff5778;
 }
 
 * {
@@ -528,6 +528,7 @@ h3 {
   width: 20px;
   min-width: fit-content;
   padding: auto;
+  text-align: center;
   height: 20px;
   max-width: 100px;
   min-height: fit-content;
