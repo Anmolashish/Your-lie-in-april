@@ -17,7 +17,7 @@ export default function Home() {
       <ViolinTape />
       <HomePage2 />
 
-      {/* <HomePage4 /> */}
+      <HomePage4 />
       {/* <HomePage5 /> */}
       <HomePage6 />
     </>
