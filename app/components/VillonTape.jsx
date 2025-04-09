@@ -58,9 +58,10 @@ export default function ViolinTape() {
           </div>
         ))}
       </div>
-      <div className="text-center mt-4 text-gray-600 text-sm">
-        Click on the strings to play
-      </div>
+      <footer className="text-center mt-4">
+        <div className="w-24 h-1 bg-gradient-to-r from-rose-200 to-indigo-200 mx-auto mb-6 rounded-full" />
+        <p className="text-sm text-gray-500">Click on the strings to play</p>
+      </footer>
     </div>
   );
 }

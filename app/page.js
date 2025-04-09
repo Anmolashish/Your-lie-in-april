@@ -13,12 +13,12 @@ export default function Home() {
     <>
       <Navbar />
       <Homepage1 />
+      <HomePage5 />
       <HomePage3 />
       <ViolinTape />
-      <HomePage2 />
 
       <HomePage4 />
-      {/* <HomePage5 /> */}
+
       <HomePage6 />
     </>
   );

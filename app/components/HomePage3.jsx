@@ -60,7 +60,7 @@ export default function HomePage3() {
 
   return (
     <div
-      className="w-full min-h-[80vh] py-16 px-4 md:p-10 gap-10 flex justify-center items-center
+      className="w-full min-h-[50vh] py-16 px-4 md:p-10 gap-10 flex justify-center items-center
     max-md:flex-col my-[50px]"
       id="polaroid"
     >
