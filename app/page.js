@@ -19,7 +19,6 @@ export default function Home() {
       <HomePage3 />
       <HomePage4 />
       <HomePage6 />
-      <EpisodeGuide />
     </>
   );
 }
