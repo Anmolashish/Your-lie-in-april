@@ -149,7 +149,7 @@ export default function HomePage3() {
           <h1 className="text-3xl md:text-5xl font-light text-pink-500 mb-2">
             Your Lie in April
           </h1>
-          <p className="text-base md:text-sm text-gray-700 ">
+          <p className="text-xs md:text-sm text-gray-700 ">
             Experience the soul-stirring music that made "Your Lie in April"
             unforgettable.
           </p>
@@ -223,9 +223,6 @@ export default function HomePage3() {
                 <p className="text-sm md:text-base">
                   {musicClips[activeIndex].description}
                 </p>
-                <p className="text-xs md:text-sm italic">
-                  Featured scene: {musicClips[activeIndex].scene}
-                </p>
               </div>
             </div>
           </div>
@@ -285,12 +282,11 @@ export default function HomePage3() {
                 )}
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-medium text-gray-800 mb-1">
+                <h3 className="text-lg max-sm:text-sm font-medium text-gray-800 mb-1">
                   {clip.title}
                 </h3>
-                <p className="text-sm text-gray-600">{clip.description}</p>
-                <p className="text-xs text-gray-500 italic mt-1">
-                  Scene: {clip.scene}
+                <p className="text-sm max-sm:text-xs text-gray-600">
+                  {clip.description}
                 </p>
               </div>
             </div>

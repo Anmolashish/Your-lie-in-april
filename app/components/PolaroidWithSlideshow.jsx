@@ -20,7 +20,7 @@ export default function PolaroidWithSlideshow({
 
   return (
     <div
-      className={`w-full max-w-sm h-fit bg-white bg-opacity-90 p-1 ${initialRotation} shadow-xl rounded-sm border border-gray-300 hover:shadow-2xl transition-all hover:rotate-0 duration-300 mx-auto my-4`}
+      className={`w-[90%] max-w-sm h-fit bg-white bg-opacity-90 p-1 ${initialRotation} shadow-xl rounded-sm border border-gray-300 hover:shadow-2xl transition-all hover:rotate-0 duration-300 mx-auto my-4`}
     >
       <div className="relative overflow-hidden">
         {images.map((image, index) => (
