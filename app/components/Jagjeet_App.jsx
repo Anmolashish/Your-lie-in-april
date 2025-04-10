@@ -2,6 +2,7 @@
 import React from 'react';
 import CardCarousel from './CardCarousel'; // Ensure this is the correct import
 import './Jagjeet_App.css';
+import EpisodeCardCarousel from './EpisodeCardCarousel';
 
 const Jagjeet_App = () => {
   // const regularCards = [
@@ -210,7 +211,7 @@ const Jagjeet_App = () => {
       ))} */}
 
       {/* Display carousel with cards 3, 4, 5, and 6 */}
-      <CardCarousel cards={carouselCards} />
+      <EpisodeCardCarousel cards={carouselCards} />
     </div>
   );
 };
