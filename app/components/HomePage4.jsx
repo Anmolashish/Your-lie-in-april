@@ -126,7 +126,7 @@ export default function HomePage3() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 text-gray-800 font-sans overflow-x-hidden">
+    <div className="min-h-screen text-gray-800 font-sans overflow-x-hidden">
       {/* Centered Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex flex-col items-center">
         <header className="text-center w-full mb-8 md:mb-12">

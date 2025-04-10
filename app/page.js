@@ -6,6 +6,7 @@ import HomePage3 from "./components/HomePage3";
 import HomePage4 from "./components/HomePage4";
 import HomePage5 from "./components/HomePage5";
 import HomePage6 from "./components/HomePage6";
+import Homepage7 from "./components/Homepage7";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
       <Homepage1 />
       <HomePage3 />
       <HomePage2 />
-
       <HomePage4 />
+      <Homepage7 />
       {/* <HomePage5 /> */}
       <HomePage6 />
     </>
