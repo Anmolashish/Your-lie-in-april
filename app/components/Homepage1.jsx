@@ -12,7 +12,7 @@ export default function Homepage1() {
       const petal = document.createElement("div");
       petal.classList.add("petal");
 
-      petal.style.left = `${Math.random() * 100}%`;
+      petal.style.left = `${Math.random() * 95}%`;
       petal.style.top = `-20px`;
 
       const size = 10 + Math.random() * 10;
@@ -41,7 +41,7 @@ export default function Homepage1() {
   }, []);
 
   return (
-    <section className="landing" id="landing">
+    <section className="landing overflow-hidden" id="landing">
       <div className="absolute w-[500px] max-w-[80%] h-[300px] bottom-0 left-[0px] flex items-end z-10">
         <Image
           src="/Images/pngegg (2).png"
