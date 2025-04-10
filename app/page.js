@@ -8,6 +8,8 @@ import HomePage5 from "./components/HomePage5";
 import HomePage6 from "./components/HomePage6";
 import ViolinTape from "./components/VillonTape";
 import EpisodeGuide from "./components/HomePage8";
+import Homepage7 from "./components/Homepage7";
+import Jagjeet_App from "./components/Jagjeet_App";
 
 export default function Home() {
   return (
@@ -16,8 +18,13 @@ export default function Home() {
       <Homepage1 />
       <HomePage5 />
       <ViolinTape />
+      <Jagjeet_App />
       <HomePage3 />
+      <HomePage2 />
       <HomePage4 />
+      <Homepage7 />
+      
+      {/* <HomePage5 /> */}
       <HomePage6 />
     </>
   );
