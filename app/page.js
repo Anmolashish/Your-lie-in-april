@@ -18,12 +18,10 @@ export default function Home() {
       <HomePage5 />
       <ViolinTape />
       <HomePage3 />
-      <HomePage2 />
       <HomePage4 />
       <Homepage7 />
       {/* <HomePage5 /> */}
       <HomePage6 />
-      <EpisodeGuide />
     </>
   );
 }
