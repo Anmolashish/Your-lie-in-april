@@ -62,8 +62,16 @@ const EpisodeCardCarousel = ({ cards = [] }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        Every Note, Every Tear: The Full Collection
+        Every Note, Every Tear: 
       </motion.h2>
+      <motion.h4 
+        className="carousel-title-1"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        The Full Collection
+      </motion.h4>
 
       <div className="carousel-wrapper">
         <AnimatePresence mode='wait'>

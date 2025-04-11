@@ -204,7 +204,7 @@ const Jagjeet_App = () => {
     ];
 
   return (
-    <div className="container">
+    <div className="container2">
       {/* Display regular cards (1 & 2) */}
       {/* {regularCards.map(card => (
         <CardComponent key={card.id} card={card} />

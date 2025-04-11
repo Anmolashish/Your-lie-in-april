@@ -20,7 +20,6 @@ export default function Home() {
       <ViolinTape />
       <Jagjeet_App />
       <HomePage3 />
-      <HomePage2 />
       <HomePage4 />
       <Homepage7 />
       
