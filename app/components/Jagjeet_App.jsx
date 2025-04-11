@@ -195,7 +195,7 @@ const Jagjeet_App = () => {
       },
       {
         id: 22,
-        image: "./Jagjeet_images/Your-Lie-In-April-Ep-22.png",
+        image: "./Jagjeet_images/episode.jpeg",
         date: "March 19, 2015",
         episode: "Episode 22",
         heading: "Spring Breeze",
