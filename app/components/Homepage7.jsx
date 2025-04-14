@@ -27,7 +27,10 @@ export default function LoveLetter() {
   });
 
   return (
-    <div className="min-h-screen font-[--font-serif] bg-gradient-to-b from-white via-[#c6c6fd] to-[#5858e8] flex items-center justify-center px-4 py-12 relative">
+    <div
+      className="min-h-screen font-[--font-serif] bg-gradient-to-b from-white via-[#c6c6fd] to-[#5858e8] flex items-center justify-center px-4 py-12 relative"
+      id="letter"
+    >
       <div className="stars" id="stars"></div>
       <div className="absolute w-[500px] left-0 top-[300px] opacity-50">
         <Image

@@ -22,7 +22,7 @@ export default function Home() {
       <HomePage3 />
       <HomePage4 />
       <Homepage7 />
-      
+
       {/* <HomePage5 /> */}
       <HomePage6 />
     </>

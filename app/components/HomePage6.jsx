@@ -9,7 +9,7 @@ export default function HomePage6() {
   useEffect(() => {
     // Create stars on component mount
     const createStars = () => {
-      const starsContainer = document.getElementById("stars");
+      const starsContainer = document.getElementById("stars2");
       const starCount = 100;
 
       // Clear existing stars
@@ -149,7 +149,7 @@ export default function HomePage6() {
           unoptimized={true} // Required for GIFs
         />
       </div>
-      <div className="stars" id="stars"></div>
+      <div className="stars2" id="stars2"></div>
       <div className="absolute w-[500px] top-[100px] opacity-50">
         <Image
           src="/Images/8918181.png"

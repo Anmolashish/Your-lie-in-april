@@ -6,6 +6,7 @@ export default function Navbar() {
   const sections = [
     "landing",
     "story",
+    "episodes",
     "polaroid",
     "music",
     "letter",

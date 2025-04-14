@@ -146,8 +146,8 @@ export default function HomePage3() {
       {/* Centered Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex flex-col items-center">
         <header className="text-center w-full mb-8 md:mb-12">
-          <h1 className="text-3xl md:text-5xl font-light text-pink-500 mb-2">
-            Your Lie in April
+          <h1 className="text-3xl md:text-5xl font-light text-[#e75480] mb-2">
+            Musical Experience
           </h1>
           <p className="text-xs md:text-sm text-gray-700 ">
             Experience the soul-stirring music that made "Your Lie in April"
