@@ -1,63 +1,97 @@
-🎻 Your Lie in April – Tribute Website
-A SkillsVarz 1.0 2025 Submission
+# Your Lie in April Tribute Website - Hackathon Project
 
-Deploy with Vercel
-Demo Preview Live Demo: your-lie-in-april.vercel.app
+## Why We Chose This Project
 
-✨ About the Project
-An immersive, interactive tribute to the anime "Your Lie in April", blending elegant frontend design with emotional storytelling. Every component—from animations to color palettes—echoes the show’s themes of music, memory, and fleeting beauty.
+We decided to create this tribute website for "Your Lie in April" because:
 
-Hackathon Focus:
+- April holds special significance for fans of this anime
+- Many fans rewatch the series every April as a tribute
+- We wanted to create a dedicated space where fans can celebrate the anime's beauty and emotional impact
+- The website serves as both a tribute and an information hub for new viewers
 
-🎨 Visual Storytelling: Scroll-triggered animations mirror key anime moments
+## Project Directory Structure
 
-🎶 Musical UI: Piano-key navigation, animated sheet music
+Here's an overview of our Next.js project structure:
 
-💌 Emotional Impact: Letter-inspired contact form (with optional EmailJS integration)
+EXPLORER
+├── .next/ # Next.js build output
+├── app/ # App router directory
+│ ├── components/ # React components
+│ ├── favicon.ico # Website icon
+│ ├── globals.css # Global styles
+│ ├── layout.js # Root layout component
+│ └── page.js # Main page component
+├── node_modules/ # Project dependencies
+├── public/ # Static assets
+├── .gitignore # Git ignore rules
+├── eslint.config.mjs # ESLint configuration
+├── jsconfig.json # JavaScript configuration
+├── next.config.mjs # Next.js configuration
+├── package-lock.json # Dependency lockfile
+├── package.json # Project metadata and scripts
+├── postcss.config.mjs # PostCSS configuration
+└── README.md # Project documentation
 
-🛠️ Tech Stack
-Core Styling Animations Utilities
-Next.js 14 Tailwind CSS Framer Motion EmailJS
-TypeScript CSS Modules GSAP Vercel Analytics
-🚀 Quick Setup
+## How to Run This Project
 
-1. Clone & Install
+### Prerequisites
+
+- Node.js (v18 or later recommended)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
    bash
-   Copy
-   git clone https://github.com/your-username/your-lie-in-april.git  
-   cd your-lie-in-april && npm install
-2. Configure (Optional)
-   Create .env.local for EmailJS:
+   git clone https://github.com/your-username/your-lie-in-april-tribute.git
 
-env
-Copy
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id  
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id  
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key  
-3. Run Dev Server
+2. Navigate to the project directory:
+   bash
+   cd YOUR-LIE-IN-APRIL
+
+3. Install dependencies:
+   bash
+   npm install
+   # or
+   yarn install
+
+### Running the Development Server
+
+Start the Next.js development server:
 bash
-Copy
-npm run dev  
-Open http://localhost:3000
+npm run dev
 
-📂 Project Structure
-Copy
-src/  
-├── app/ # Next.js 14 app router  
-│ ├── (sections)/ # Anime-themed page sections  
-│ ├── api/ # Form submission endpoint  
-├── components/ # Reusable UI (Piano, LetterForm, etc.)  
-├── public/ # Optimized assets (music snippets, sprites)  
-└── lib/ # Utilities & animations  
-🌈 Contribution Guidelines
-Fork the repository
+# or
 
-Create a branch: git checkout -b feature/your-idea
+yarn dev
 
-Submit a PR with:
+The application will be available at:
 
-Screenshots of UI changes
+http://localhost:3000
 
-Description of anime-inspired elements added
+### Building for Production
 
-Inspired by Kōsei’s journey. Made with ❤️ for Hackwave 2025.
+To create an optimized production build:
+bash
+npm run build
+
+# or
+
+yarn build
+
+To start the production server:
+bash
+npm start
+
+# or
+
+yarn start
+
+## Features
+
+- Tribute page for "Your Lie in April"
+- Character information and gallery
+- Memorable quotes from the series
+- Episode guide and music references
+
+We hope this website serves as a beautiful tribute to this beloved anime and enhances the April viewing experience for fans worldwide.
