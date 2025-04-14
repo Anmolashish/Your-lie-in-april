@@ -11,7 +11,7 @@ export default function CharactersPage() {
       role: "Piano Prodigy",
       description:
         "A former child prodigy who lost his ability to hear piano sounds after his mother's death.",
-      image: "/images/233573438c6b7ebf19e51e96e5a84510.jpg",
+      image: "/Images/233573438c6b7ebf19e51e96e5a84510.jpg",
       color: "#fda4af",
       theme: "bg-rose-50",
       quote:
@@ -22,7 +22,7 @@ export default function CharactersPage() {
       role: "Free-spirited Violinist",
       description:
         "A vibrant violinist whose passionate performances shake Kousei's world.",
-      image: "/images/f4601aa255db72adfcf098ad4fb35eba.jpg",
+      image: "/Images/f4601aa255db72adfcf098ad4fb35eba.jpg",
       color: "#a5b4fc",
       theme: "bg-indigo-50",
       quote: "I want to leave a mark on my audience's hearts!",
@@ -32,7 +32,7 @@ export default function CharactersPage() {
       role: "Childhood Friend",
       description:
         "Kousei's loyal friend since childhood. A softball player struggling with her feelings.",
-      image: "/images/0edc6991db88f755b4e863151aee63d8.jpg",
+      image: "/Images/0edc6991db88f755b4e863151aee63d8.jpg",
       color: "#fcd34d",
       theme: "bg-amber-50",
       quote: "I just want to see you smile like you used to.",
@@ -41,7 +41,7 @@ export default function CharactersPage() {
       name: "Ryouta Watari",
       role: "Popular Athlete",
       description: "The school's star soccer player with a playboy reputation.",
-      image: "/images/3a530081071da8be1eb164e5423bcd80.jpg",
+      image: "/Images/3a530081071da8be1eb164e5423bcd80.jpg",
       color: "#6ee7b7",
       theme: "bg-emerald-50",
       quote: "You never know what someone's really going through.",
