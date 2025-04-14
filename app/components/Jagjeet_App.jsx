@@ -39,7 +39,7 @@ const Jagjeet_App = () => {
         date: "October 16, 2014",
         episode: "Episode 2",
         heading: "Friend A",
-        intro: "Kaori drags Kousei into accompanying her at a competition, forcing him to confront his trauma. Her unorthodox performance style shocks the audience and begins to change Kousei's perspective on music."
+        intro: "Kaori drags Kousei into accompanying her at a competition, forcing him to confront his trauma. Her unorthodox performance style shocks tfit he audience and begins to change Kousei's perspective on music."
       },
       {
         id: 3,
