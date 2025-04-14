@@ -13,7 +13,24 @@ We decided to create this tribute website for "Your Lie in April" because:
 
 Here's an overview of our Next.js project structure:
 
-<pre> ```bash EXPLORER ├── .next/ # Next.js build output ├── app/ # App router directory │ ├── components/ # React components │ ├── favicon.ico # Website icon │ ├── globals.css # Global styles │ ├── layout.js # Root layout component │ └── page.js # Main page component ├── node_modules/ # Project dependencies ├── public/ # Static assets ├── .gitignore # Git ignore rules ├── eslint.config.mjs # ESLint configuration ├── jsconfig.json # JavaScript configuration ├── next.config.mjs # Next.js configuration ├── package-lock.json # Dependency lockfile ├── package.json # Project metadata and scripts ├── postcss.config.mjs # PostCSS configuration └── README.md # Project documentation ``` </pre>
+<pre> ```bash EXPLORER 
+├── .next/ # Next.js build output 
+├── app/ # App router directory 
+│ ├── components/ # React components 
+│ ├── favicon.ico # Website icon 
+│ ├── globals.css # Global styles 
+│ ├── layout.js # Root layout component 
+│ └── page.js # Main page component 
+├── node_modules/ # Project dependencies 
+├── public/ # Static assets 
+├── .gitignore # Git ignore rules 
+├── eslint.config.mjs # ESLint configuration 
+├── jsconfig.json # JavaScript configuration 
+├── next.config.mjs # Next.js configuration 
+├── package-lock.json # Dependency lockfile 
+├── package.json # Project metadata and scripts 
+├── postcss.config.mjs # PostCSS configuration 
+└── README.md # Project documentation ``` </pre>
 
 ## How to Run This Project
 
