@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/caveat": "^5.2.5",
     "framer-motion": "^12.6.3",
     "next": "15.2.4",
     "react": "^19.0.0",

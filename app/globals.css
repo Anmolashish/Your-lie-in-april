@@ -1,15 +1,55 @@
 @import "tailwindcss";
 
+/* Base variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --font-caveat: "Caveat", cursive;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+:root {
+  --font-serif: "Playfair Display", serif;
+}
+
+/* Tailwind CSS 4.1 Inline Theme Config */
+@theme inline {
+  --font-serif: var(--font-serif);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-caveat: var(--font-caveat);
+
+  /* Custom Keyframes */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotateX(10deg) rotateZ(-8deg) rotateY(2deg);
+    }
+    50% {
+      transform: translateY(-20px) rotateX(15deg) rotateZ(-10deg) rotateY(4deg);
+    }
+  }
+
+  @keyframes shadow-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(0.9);
+      opacity: 0.4;
+    }
+  }
+
+  /* Custom Animations */
+  --animation-float: float 10s ease-in-out infinite;
+  --animation-shadow-pulse: shadow-pulse 10s ease-in-out infinite;
 }
 
 :root {
@@ -486,7 +526,7 @@ h3 {
 .memorial-section {
   min-height: 100vh;
   padding: 5rem 2rem;
-  background: linear-gradient(to bottom, #2a389d, #5858e8);
+  background: linear-gradient(to bottom, #5858e8, #5858e8);
   color: white;
   position: relative;
 }
