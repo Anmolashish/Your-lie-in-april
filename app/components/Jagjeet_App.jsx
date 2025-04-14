@@ -54,7 +54,7 @@ const Jagjeet_App = () => {
         image: "./Jagjeet_images/Your-Lie-In-April-Ep-4.png",
         date: "October 30, 2014",
         episode: "Episode 4",
-        heading: "Departure",
+        heading: "The Journey",
         intro: "Kousei enters a piano competition, battling his inner demons. Kaori's encouragement clashes with his fear of failure, setting up his first public performance since his mother's death."
       },
       {

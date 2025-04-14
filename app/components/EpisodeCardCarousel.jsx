@@ -9,6 +9,36 @@ const EpisodeCardCarousel = ({ cards = [] }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Function to generate episode URL based on episode ID
+  const getEpisodeUrl = (episodeId) => {
+    const baseUrl = "https://hianime.sx/watch/your-lie-in-april-31";
+    const episodeMapping = {
+      1: 926,   // Episode 1 -> ?ep=926
+      2: 927,   // Episode 2 -> ?ep=927
+      3: 928,   // And so on...
+      4: 929,
+      5: 930,
+      6: 931,
+      7: 932,
+      8: 933,
+      9: 934,
+      10: 935,
+      11: 936,
+      12: 937,
+      13: 938,
+      14: 939,
+      15: 940,
+      16: 941,
+      17: 942,
+      18: 943,
+      19: 944,
+      20: 945,
+      21: 946,
+      22: 947
+    };
+    return `${baseUrl}?ep=${episodeMapping[episodeId]}`;
+  };
+
   useEffect(() => {
     if (cards.length > 0) setIsLoading(false);
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
@@ -84,37 +114,44 @@ const EpisodeCardCarousel = ({ cards = [] }) => {
             transition={{ duration: 0.4 }}
           >
             {currentCards.map((card) => (
-              <motion.div 
+              <a 
                 key={card.id}
-                className="card"
-                whileHover={{ scale: 1.02 }}
+                href={getEpisodeUrl(card.id)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-link"
               >
-                <div className="image-container">
-                  <img 
-                    src={card.image} 
-                    alt={`episode_${card.id}`} 
-                    className="gradient-border"
-                  />
-                  <div className="episode-overlay">{card.episode}</div>
-                </div>
-                
-                <div className="content">
-                  <div className="meta-info">
-                    <span className="date">{card.date}</span>
-                    <div className="progress-dots">
-                      {cards.map((_, idx) => (
-                        <span 
-                          key={idx}
-                          className={`dot ${idx === currentIndex ? 'active' : ''}`}
-                        />
-                      ))}
-                    </div>
+                <motion.div 
+                  className="card"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="image-container">
+                    <img 
+                      src={card.image} 
+                      alt={`episode_${card.id}`} 
+                      className="gradient-border"
+                    />
+                    <div className="episode-overlay">{card.episode}</div>
                   </div>
                   
-                  <motion.h3 className="heading">{card.heading}</motion.h3>
-                  <p className="intro">{card.intro}</p>
-                </div>
-              </motion.div>
+                  <div className="content">
+                    <div className="meta-info">
+                      <span className="date">{card.date}</span>
+                      <div className="progress-dots">
+                        {cards.map((_, idx) => (
+                          <span 
+                            key={idx}
+                            className={`dot ${idx === currentIndex ? 'active' : ''}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <motion.h3 className="heading">{card.heading}</motion.h3>
+                    <p className="intro">{card.intro}</p>
+                  </div>
+                </motion.div>
+              </a>
             ))}
           </motion.div>
         </AnimatePresence>
