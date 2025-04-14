@@ -20,10 +20,9 @@ export default function Home() {
       <ViolinTape />
       <Jagjeet_App />
       <HomePage3 />
-      <HomePage2 />
       <HomePage4 />
       <Homepage7 />
-      
+
       {/* <HomePage5 /> */}
       <HomePage6 />
     </>
