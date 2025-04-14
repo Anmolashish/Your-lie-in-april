@@ -144,7 +144,7 @@ const Jagjeet_App = () => {
     },
     {
       id: 14,
-      image: "./Jagjeet_images/Your-Lie-In-April-Ep-14.png",
+      image: "./Jagjeet_images/your-lie-in-april-Ep-14.png",
       date: "January 15, 2015",
       episode: "Episode 14",
       heading: "Footsteps",
@@ -226,7 +226,7 @@ const Jagjeet_App = () => {
   ];
 
   return (
-    <div className="container2">
+    <div className="container2" id="episodes">
       {/* Display regular cards (1 & 2) */}
       {/* {regularCards.map(card => (
         <CardComponent key={card.id} card={card} />
