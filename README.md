@@ -43,7 +43,7 @@ Here's an overview of our Next.js project structure:
 
 1. Clone the repository:
    bash
-   git clone https://github.com/your-username/your-lie-in-april-tribute.git
+   git clone https://github.com/Anmolashish/Your-lie-in-april.git
 
 2. Navigate to the project directory:
    bash
